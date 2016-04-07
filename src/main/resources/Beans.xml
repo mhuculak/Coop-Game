@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean class="coop.item.Key" id="item0">
+        <constructor-arg name="name" value="thekey"/>
+        <property name="type" value="key"/>
+        <property name="weight">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.item.Pen" id="item1">
+        <constructor-arg name="name" value="pen"/>
+        <property name="type" value="pen"/>
+        <property name="weight">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.item.Pen" id="item2">
+        <constructor-arg name="name" value="mypen"/>
+        <property name="type" value="pen"/>
+        <property name="weight">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.item.Paper" id="item3">
+        <constructor-arg name="name" value="paper"/>
+        <property name="type" value="paper"/>
+        <property name="weight">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Door" id="door0">
+        <constructor-arg name="name" value="0"/>
+        <property name="locked">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="true"/>
+            </bean>
+        </property>
+        <property name="key">
+            <ref local="item0"/>
+        </property>
+    </bean>
+    <bean class="coop.map.GameDoors" id="doors">
+        <property name="doors">
+            <list>
+                <ref local="door0"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall0">
+        <constructor-arg name="name" value="0"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall1">
+        <constructor-arg name="name" value="1"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall2">
+        <constructor-arg name="name" value="2"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall3">
+        <constructor-arg name="name" value="3"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall4">
+        <constructor-arg name="name" value="4"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall5">
+        <constructor-arg name="name" value="5"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall6">
+        <constructor-arg name="name" value="6"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall7">
+        <constructor-arg name="name" value="7"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall10">
+        <constructor-arg name="name" value="10"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall11">
+        <constructor-arg name="name" value="11"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+        <property name="door">
+            <ref local="door0"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall12">
+        <constructor-arg name="name" value="12"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall13">
+        <constructor-arg name="name" value="13"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall14">
+        <constructor-arg name="name" value="14"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall15">
+        <constructor-arg name="name" value="15"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall16">
+        <constructor-arg name="name" value="16"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall17">
+        <constructor-arg name="name" value="17"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall18">
+        <constructor-arg name="name" value="18"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall19">
+        <constructor-arg name="name" value="19"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall20">
+        <constructor-arg name="name" value="20"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall21">
+        <constructor-arg name="name" value="21"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall22">
+        <constructor-arg name="name" value="22"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall23">
+        <constructor-arg name="name" value="23"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="1.5"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall24">
+        <constructor-arg name="name" value="24"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Wall" id="wall25">
+        <constructor-arg name="name" value="25"/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="5.0"/>
+            </bean>
+        </property>
+        <property name="hasRoof">
+            <bean class="java.lang.Boolean">
+                <constructor-arg value="false"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.GameWalls" id="walls">
+        <property name="walls">
+            <list>
+                <ref local="wall0"/>
+                <ref local="wall1"/>
+                <ref local="wall2"/>
+                <ref local="wall3"/>
+                <ref local="wall4"/>
+                <ref local="wall5"/>
+                <ref local="wall6"/>
+                <ref local="wall7"/>
+                <ref local="wall10"/>
+                <ref local="wall11"/>
+                <ref local="wall12"/>
+                <ref local="wall13"/>
+                <ref local="wall14"/>
+                <ref local="wall15"/>
+                <ref local="wall16"/>
+                <ref local="wall17"/>
+                <ref local="wall18"/>
+                <ref local="wall19"/>
+                <ref local="wall20"/>
+                <ref local="wall21"/>
+                <ref local="wall22"/>
+                <ref local="wall23"/>
+                <ref local="wall24"/>
+                <ref local="wall25"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="coop.item.GameItems" id="items">
+        <property name="items">
+            <list>
+                <ref local="item0"/>
+                <ref local="item1"/>
+                <ref local="item2"/>
+                <ref local="item3"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position11">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="45.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="26.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position22">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position10">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="900.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position33">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="45.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="78.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position44">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="104.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position32">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="900.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position1">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="90.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position23">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="90.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position12">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="135.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="26.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position55">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="45.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="130.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position66">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="156.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position54">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="900.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="104.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position45">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="90.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="104.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position34">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="135.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="78.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position2">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="180.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position24">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="180.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position132">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="312.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position154">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="364.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position143">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="45.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="338.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position121">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="45.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="286.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position133">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="90.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="312.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position111">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="90.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="260.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position122">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="135.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="286.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position100">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="135.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="234.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position112">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="180.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="260.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position90">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="180.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="208.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position101">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="225.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="234.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position79">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="225.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="182.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position68">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="180.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="156.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position57">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="225.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="130.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position69">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="270.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="156.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position47">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="270.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="104.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position58">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="315.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="130.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position36">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="315.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="78.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position48">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="360.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="104.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position26">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="360.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position37">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="405.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="78.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position15">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="405.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="26.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position27">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="450.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="52.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position16">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="495.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="26.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position5">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="450.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position113">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="270.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="260.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="position123">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="225.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="286.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.map.Position" id="playerPosition0">
+        <property name="x">
+            <bean class="java.lang.Double">
+                <constructor-arg value="120.0"/>
+            </bean>
+        </property>
+        <property name="y">
+            <bean class="java.lang.Double">
+                <constructor-arg value="130.0"/>
+            </bean>
+        </property>
+    </bean>
+    <bean class="coop.player.Player" id="player0">
+        <constructor-arg name="name" value="Player1"/>
+        <property name="desc" value=""/>
+        <property name="height">
+            <bean class="java.lang.Double">
+                <constructor-arg value="1.8"/>
+            </bean>
+        </property>
+        <property name="weight">
+            <bean class="java.lang.Double">
+                <constructor-arg value="80.0"/>
+            </bean>
+        </property>
+        <property name="strength">
+            <bean class="java.lang.Double">
+                <constructor-arg value="0.7"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="playerPosition0"/>
+        </property>
+    </bean>
+    <bean class="coop.player.GamePlayers" id="players">
+        <property name="available">
+            <list>
+                <ref local="player0"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place10">
+        <constructor-arg name="name" value="place10"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="10"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position10"/>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water3" value="1"/>
+                <entry key="water20" value="2"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place32">
+        <constructor-arg name="name" value="place32"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="32"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position32"/>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water19" value="1"/>
+                <entry key="water38" value="2"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place55">
+        <constructor-arg name="name" value="place55"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="55"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position55"/>
+        </property>
+        <property name="items">
+            <list>
+                <ref local="item2"/>
+            </list>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water30" value="0"/>
+                <entry key="water35" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place66">
+        <constructor-arg name="name" value="place66"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="66"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position66"/>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water36" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place54">
+        <constructor-arg name="name" value="place54"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="54"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position54"/>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water37" value="1"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place45">
+        <constructor-arg name="name" value="place45"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="45"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position45"/>
+        </property>
+        <property name="players">
+            <list>
+                <ref local="player0"/>
+            </list>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water24" value="0"/>
+                <entry key="water29" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place34">
+        <constructor-arg name="name" value="place34"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="34"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position34"/>
+        </property>
+        <property name="items">
+            <list>
+                <ref local="item3"/>
+            </list>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water13" value="0"/>
+                <entry key="water23" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place2">
+        <constructor-arg name="name" value="place2"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="2"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position2"/>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water11" value="4"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place24">
+        <constructor-arg name="name" value="place24"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="24"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position24"/>
+        </property>
+        <property name="items">
+            <list>
+                <ref local="item0"/>
+            </list>
+        </property>
+        <property name="waterMap">
+            <map>
+                <entry key="water12" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place132">
+        <constructor-arg name="name" value="place132"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="132"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position132"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall0" value="3"/>
+                <entry key="wall1" value="2"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place154">
+        <constructor-arg name="name" value="place154"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="154"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position154"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place143">
+        <constructor-arg name="name" value="place143"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="143"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position143"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall2" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place121">
+        <constructor-arg name="name" value="place121"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="121"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position121"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place133">
+        <constructor-arg name="name" value="place133"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="133"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position133"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall3" value="5"/>
+                <entry key="wall4" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place111">
+        <constructor-arg name="name" value="place111"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="111"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position111"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place122">
+        <constructor-arg name="name" value="place122"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="122"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position122"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall5" value="5"/>
+                <entry key="wall6" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place100">
+        <constructor-arg name="name" value="place100"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="100"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position100"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place112">
+        <constructor-arg name="name" value="place112"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="112"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position112"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall7" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place90">
+        <constructor-arg name="name" value="place90"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="90"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position90"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall23" value="2"/>
+                <entry key="wall24" value="3"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place101">
+        <constructor-arg name="name" value="place101"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="101"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position101"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place79">
+        <constructor-arg name="name" value="place79"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="79"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position79"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall10" value="4"/>
+                <entry key="wall11" value="5"/>
+                <entry key="wall12" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place68">
+        <constructor-arg name="name" value="place68"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="68"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position68"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place57">
+        <constructor-arg name="name" value="place57"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="57"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position57"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place69">
+        <constructor-arg name="name" value="place69"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="69"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position69"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall13" value="5"/>
+                <entry key="wall14" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place47">
+        <constructor-arg name="name" value="place47"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="47"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position47"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place58">
+        <constructor-arg name="name" value="place58"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="58"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position58"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall15" value="5"/>
+                <entry key="wall16" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place36">
+        <constructor-arg name="name" value="place36"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="36"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position36"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place48">
+        <constructor-arg name="name" value="place48"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="48"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position48"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall17" value="5"/>
+                <entry key="wall18" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place26">
+        <constructor-arg name="name" value="place26"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="26"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position26"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place37">
+        <constructor-arg name="name" value="place37"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="37"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position37"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall19" value="5"/>
+                <entry key="wall20" value="0"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place15">
+        <constructor-arg name="name" value="place15"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="15"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position15"/>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place27">
+        <constructor-arg name="name" value="place27"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="27"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position27"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall21" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place16">
+        <constructor-arg name="name" value="place16"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="16"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position16"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall22" value="5"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place5">
+        <constructor-arg name="name" value="place5"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="5"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position5"/>
+        </property>
+        <property name="wallMap">
+            <map>
+                <entry key="wall25" value="3"/>
+            </map>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place113">
+        <constructor-arg name="name" value="place113"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="113"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position113"/>
+        </property>
+        <property name="items">
+            <list>
+                <ref local="item1"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="coop.map.Place" id="place123">
+        <constructor-arg name="name" value="place123"/>
+        <property name="desc" value=""/>
+        <property name="cellID">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="123"/>
+            </bean>
+        </property>
+        <property name="edgeSize">
+            <bean class="java.lang.Double">
+                <constructor-arg value="30.0"/>
+            </bean>
+        </property>
+        <property name="cellsPerRow">
+            <bean class="java.lang.Integer">
+                <constructor-arg value="11"/>
+            </bean>
+        </property>
+        <property name="position">
+            <ref local="position123"/>
+        </property>
+    </bean>
+    <bean class="coop.map.GamePlaces" id="places">
+        <property name="places">
+            <list>
+                <ref local="place10"/>
+                <ref local="place32"/>
+                <ref local="place55"/>
+                <ref local="place66"/>
+                <ref local="place54"/>
+                <ref local="place45"/>
+                <ref local="place34"/>
+                <ref local="place2"/>
+                <ref local="place24"/>
+                <ref local="place132"/>
+                <ref local="place154"/>
+                <ref local="place143"/>
+                <ref local="place121"/>
+                <ref local="place133"/>
+                <ref local="place111"/>
+                <ref local="place122"/>
+                <ref local="place100"/>
+                <ref local="place112"/>
+                <ref local="place90"/>
+                <ref local="place101"/>
+                <ref local="place79"/>
+                <ref local="place68"/>
+                <ref local="place57"/>
+                <ref local="place69"/>
+                <ref local="place47"/>
+                <ref local="place58"/>
+                <ref local="place36"/>
+                <ref local="place48"/>
+                <ref local="place26"/>
+                <ref local="place37"/>
+                <ref local="place15"/>
+                <ref local="place27"/>
+                <ref local="place16"/>
+                <ref local="place5"/>
+                <ref local="place113"/>
+                <ref local="place123"/>
+            </list>
+        </property>
+    </bean>
+</beans>
